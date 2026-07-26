@@ -11,6 +11,10 @@ Recopilacion de referencias y aprendizajes sobre inteligencia artificial.
 - [[Anthropic - Overview|Anthropic]]
 - [[Andrej Karpathy - Notas|Andrej Karpathy]]
 
+## Conceptos Relacionados
+- [[30 - Recursos/Conceptos/Vibe Coding|Vibe Coding]]
+- [[30 - Recursos/Conceptos/Constitutional AI|Constitutional AI]]
+
 ## Temas Clave 2026
 - AI-assisted research (modelos ayudando a crear mejores modelos)
 - Vibe coding vs Agentic engineering

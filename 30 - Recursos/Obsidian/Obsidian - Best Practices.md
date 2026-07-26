@@ -6,7 +6,7 @@ created: 2026-07-01
 
 ## Metodos de Organizacion
 
-### PARA Method (Tiago Forte)
+### [[30 - Recursos/Conceptos/PARA Method|PARA Method]] (Tiago Forte)
 - **Projects** - Trabajo activo con fecha limite
 - **Areas** - Responsabilidades continuas sin deadline
 - **Resources** - Referencia por tema
@@ -16,6 +16,9 @@ created: 2026-07-01
 - Notas atomicas (una idea)
 - Conexion via links
 - Notas de indice y estructura
+
+### [[30 - Recursos/Conceptos/MOC - Map of Content|MOC]] — Maps of Content
+Notas indice como hubs navegables para reemplazar jerarquias profundas de carpetas.
 
 ### Hybrido Recomendado
 PARA para estructura organizacional + Zettelkasten para notas de pensamiento. Links como sistema de navegacion primario.
