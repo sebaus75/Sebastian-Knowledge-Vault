@@ -1,0 +1,16 @@
+# API keys and secrets
+.obsidian/plugins/*/data.json
+
+# Workspace layout (personal, machine-specific)
+.obsidian/workspace.json
+
+# App config (personal preferences)
+.obsidian/app.json
+.obsidian/appearance.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
