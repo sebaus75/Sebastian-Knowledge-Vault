@@ -8,4 +8,6 @@ Nota indice que centraliza y organiza enlaces a otras notas sobre un tema. Actua
 
 **Idea clave**: En vez de jerarquias de carpetas profundas, usar notas indice que conectan contenido relacionado.
 
-Ejemplos en este vault: [[Home.md]], [[10 - Proyectos/Isaac Torres - Wolf Barber/Isaac Torres - Wolf Barber|Isaac Torres - Wolf Barber]], [[30 - Recursos/IA y Machine Learning/IA - Index|IA Index]].
+Ejemplos en este vault: [[Home.md]], [[10 - Proyectos/Isaac Torres - Wolf Barber/Isaac Torres - Wolf Barber|Isaac Torres - Wolf Barber]], [[10 - Proyectos/Suplehuges/Suplehuges|Suplehuges]], [[30 - Recursos/IA y Machine Learning/IA - Index|IA Index]].
+
+Relacionado con: [[30 - Recursos/Conceptos/PARA Method|PARA Method]], [[30 - Recursos/Obsidian/Obsidian - Best Practices|Obsidian - Best Practices]], [[30 - Recursos/Obsidian/Obsidian - Vault Management|Obsidian - Vault Management]].

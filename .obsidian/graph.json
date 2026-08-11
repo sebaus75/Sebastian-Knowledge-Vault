@@ -6,7 +6,64 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": true,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "tag:#proyecto/activo",
+      "color": {
+        "a": 1,
+        "rgb": 15246141
+      }
+    },
+    {
+      "query": "tag:#suplehuges",
+      "color": {
+        "a": 1,
+        "rgb": 14753070
+      }
+    },
+    {
+      "query": "tag:#barberia",
+      "color": {
+        "a": 1,
+        "rgb": 12092939
+      }
+    },
+    {
+      "query": "tag:#template",
+      "color": {
+        "a": 1,
+        "rgb": 2282478
+      }
+    },
+    {
+      "query": "tag:#recurso/ia",
+      "color": {
+        "a": 1,
+        "rgb": 10980346
+      }
+    },
+    {
+      "query": "tag:#recurso/obsidian",
+      "color": {
+        "a": 1,
+        "rgb": 6333946
+      }
+    },
+    {
+      "query": "tag:#concepto",
+      "color": {
+        "a": 1,
+        "rgb": 7129487
+      }
+    },
+    {
+      "query": "tag:#meta",
+      "color": {
+        "a": 1,
+        "rgb": 8947848
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -17,6 +74,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.7132754626224388,
+  "scale": 0.713275462622436,
   "close": true
 }

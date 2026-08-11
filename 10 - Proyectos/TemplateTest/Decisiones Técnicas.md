@@ -1,5 +1,6 @@
 ---
 tags: [adr, arquitectura, decisiones]
+created: 2026-07-25
 ---
 # Decisiones Técnicas
 

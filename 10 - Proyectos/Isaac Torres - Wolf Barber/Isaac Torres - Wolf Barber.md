@@ -1,11 +1,15 @@
 ---
 estado: Activo
-created: 2025-07-24
+fase: produccion
+created: 2026-07-24
+updated: 2026-08-10
 tags: [proyecto/activo, frontend, barberia, gas]
 ---
 # Isaac Torres — Wolf Barber
 
 > Landing page premium para barbería de alta gama con temática vikinga. Catálogo dinámico, galería con filtros, booking vía Google Calendar, panel admin CMS y notificaciones por correo.
+
+**Estado vivo**: [[10 - Proyectos/Isaac Torres - Wolf Barber/STATUS]] — fase, pendientes y próxima sesión.
 
 **URL**: https://isaactorres.vercel.app
 **Estado**: Producción activa
@@ -17,21 +21,21 @@ tags: [proyecto/activo, frontend, barberia, gas]
 ## Map of Content
 
 ### Sistema
-- [[Isaac Torres - Wolf Barber/Arquitectura|Arquitectura]] — Stack, flujo, endpoints
-- [[Isaac Torres - Wolf Barber/Backend - Google Apps Script|Backend — Google Apps Script]] — Code.gs, sheets, seguridad
-- [[Isaac Torres - Wolf Barber/Frontend|Frontend]] — index.html, script.js, style.css
-- [[Isaac Torres - Wolf Barber/Admin Panel|Admin Panel]] — admin.html, js/admin.js
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Arquitectura|Arquitectura]] — Stack, flujo, endpoints
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Backend - Google Apps Script|Backend — Google Apps Script]] — Code.gs, sheets, seguridad
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Frontend|Frontend]] — index.html, script.js, style.css
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Admin Panel|Admin Panel]] — admin.html, js/admin.js
 
 ### Operaciones
-- [[Isaac Torres - Wolf Barber/Deployment|Deployment]] — Vercel + GAS, configuración
-- [[Isaac Torres - Wolf Barber/Guia para Isaac|Guía para Isaac]] — Manual del propietario
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Deployment|Deployment]] — Vercel + GAS, configuración
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Guia para Isaac|Guía para Isaac]] — Manual del propietario
 
 ### Registro
-- [[Isaac Torres - Wolf Barber/Seguridad - Auditoria|Seguridad — Auditoría]] — Vulnerabilidades corregidas
-- [[Isaac Torres - Wolf Barber/Decisiones Técnicas|Decisiones Técnicas]] — ADR del proyecto
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Seguridad - Auditoria|Seguridad — Auditoría]] — Vulnerabilidades corregidas
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Decisiones Técnicas|Decisiones Técnicas]] — ADR del proyecto
 
 ### Producto
-- [[Isaac Torres - Wolf Barber/Brand y Producto|Brand y Producto]] — Identidad, diseño, audiencia
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Brand y Producto|Brand y Producto]] — Identidad, diseño, audiencia
 
 ---
 
@@ -46,7 +50,7 @@ tags: [proyecto/activo, frontend, barberia, gas]
 | Notificaciones | Email vía MailApp |
 | Auth admin | Login local (usuario+pass) + respaldo en sheet Usuarios |
 | Dominio | isaactorres.vercel.app |
-| Última auditoría | Julio 2026 — ver [[Isaac Torres - Wolf Barber/Seguridad - Auditoria]] |
+| Última auditoría | Julio 2026 — ver [[10 - Proyectos/Isaac Torres - Wolf Barber/Seguridad - Auditoria]] |
 
 ## Contacto proyecto
 

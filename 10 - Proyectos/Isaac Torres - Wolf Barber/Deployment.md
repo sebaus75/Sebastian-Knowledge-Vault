@@ -1,5 +1,6 @@
 ---
 tags: [deployment, devops, vercel, gas]
+created: 2026-07-24
 ---
 # Deployment
 

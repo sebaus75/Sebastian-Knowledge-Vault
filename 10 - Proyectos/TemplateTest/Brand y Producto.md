@@ -1,5 +1,6 @@
 ---
 tags: [brand, producto, negocio, pricing]
+created: 2026-07-25
 ---
 # Brand y Producto
 

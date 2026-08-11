@@ -1,9 +1,16 @@
+---
+created: 2026-07-25
+tags: [area, desarrollo-web, indice]
+---
+
 # Desarrollo Web - Index
 
 Area de conocimiento y practica continua en desarrollo web.
 
 ## Proyectos Activos
-- [[10 - Proyectos/Isaac Torres - Wolf Barber/Isaac Torres - Wolf Barber|Isaac Torres - Wolf Barber]]
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Isaac Torres - Wolf Barber|Isaac Torres - Wolf Barber]] — Landing vikinga premium con booking + CMS
+- [[10 - Proyectos/Suplehuges/Suplehuges|Suplehuges]] — Ecommerce Shopify, propuesta comercial en curso
+- [[10 - Proyectos/TemplateTest/TemplateTest|TemplateTest]] — Template comercial reutilizable ($30k+)
 
 ## Tecnologias
 - HTML, CSS, JavaScript

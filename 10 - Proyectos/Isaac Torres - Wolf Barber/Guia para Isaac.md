@@ -1,5 +1,6 @@
 ---
 tags: [manual, operacion, propietario]
+created: 2026-07-24
 ---
 # Guía para Isaac
 
@@ -70,5 +71,5 @@ Usar el panel admin para:
 
 ## Referencias
 
-- [[Isaac Torres - Wolf Barber/Deployment|Deployment]] — Despliegue completo
-- [[Isaac Torres - Wolf Barber/Seguridad - Auditoria|Seguridad]] — Vulnerabilidades corregidas
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Deployment|Deployment]] — Despliegue completo
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Seguridad - Auditoria|Seguridad]] — Vulnerabilidades corregidas

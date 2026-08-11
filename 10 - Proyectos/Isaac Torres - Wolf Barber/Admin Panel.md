@@ -1,5 +1,6 @@
 ---
 tags: [admin, cms, frontend]
+created: 2026-07-24
 ---
 # Admin Panel
 

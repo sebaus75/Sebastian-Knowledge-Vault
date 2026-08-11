@@ -1,5 +1,6 @@
 ---
 tags: [backend, gas, security]
+created: 2026-07-24
 ---
 # Backend — Google Apps Script
 
@@ -67,7 +68,7 @@ tags: [backend, gas, security]
 - Validación server-side imágenes 10MB
 - Folio uniqueness en generateId()
 - Sin console.log en frontend
-- [[Isaac Torres - Wolf Barber/Seguridad - Auditoria|Ver auditoría completa]]
+- [[10 - Proyectos/Isaac Torres - Wolf Barber/Seguridad - Auditoria|Ver auditoría completa]]
 
 ## Propiedades del Spreadsheet
 

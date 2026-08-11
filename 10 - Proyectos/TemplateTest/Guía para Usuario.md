@@ -1,5 +1,6 @@
 ---
 tags: [manual, usuario, cliente, onboarding]
+created: 2026-07-25
 ---
 # Guía para Usuario
 

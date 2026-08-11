@@ -1,5 +1,6 @@
 ---
 tags: [frontend, html, css, javascript, modulos]
+created: 2026-07-25
 ---
 # Frontend
 
@@ -75,7 +76,7 @@ Grid con lazy loading (`IntersectionObserver` + fallback), blur placeholder CSS,
 Controlador principal: carga theme.json + config.json, detecta primer uso (wizard 4 pasos: nombre, WhatsApp, email, descripción), renderiza todas las secciones, maneja scroll events, parallax, FAQ accordion, scroll reveal (`IntersectionObserver`), glow effect en mouse move, dark mode toggle, error boundary global.
 
 ### admin.js (829 líneas)
-Admin SPA en un solo archivo. Ver sección [[TemplateTest/Admin Panel|Admin Panel]].
+Admin SPA en un solo archivo. Ver sección [[10 - Proyectos/TemplateTest/Admin Panel|Admin Panel]].
 
 ## style.css (419 líneas)
 

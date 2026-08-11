@@ -1,11 +1,15 @@
 ---
 estado: Activo
+fase: listo-empaquetar
 created: 2026-07-25
+updated: 2026-08-10
 tags: [proyecto/activo, frontend, template, comercial, gas]
 ---
 # TemplateTest
 
 > Template landing page + admin panel de nivel comercial ($30k+). 4 temas visuales, booking multi-paso, galería drag & drop, i18n, seguridad, backend GAS. Producto genérico adaptable a cualquier nicho de negocio.
+
+**Estado vivo**: [[10 - Proyectos/TemplateTest/STATUS]] — fase, pendientes y próxima sesión.
 
 **URL**: https://templatetest.vercel.app (pendiente deploy)
 **Estado**: Desarrollo completado — listo para empaquetar
@@ -18,21 +22,21 @@ tags: [proyecto/activo, frontend, template, comercial, gas]
 ## Map of Content
 
 ### Sistema
-- [[TemplateTest/Arquitectura|Arquitectura]] — Stack, flujo, estructura de archivos
-- [[TemplateTest/Backend - Google Apps Script|Backend — Google Apps Script]] — Code.gs, endpoints, seguridad server-side
-- [[TemplateTest/Frontend|Frontend]] — index.html, 8 módulos JS, style.css
-- [[TemplateTest/Admin Panel|Admin Panel]] — admin.html, admin.js, 12 pestañas CRUD
+- [[10 - Proyectos/TemplateTest/Arquitectura|Arquitectura]] — Stack, flujo, estructura de archivos
+- [[10 - Proyectos/TemplateTest/Backend - Google Apps Script|Backend — Google Apps Script]] — Code.gs, endpoints, seguridad server-side
+- [[10 - Proyectos/TemplateTest/Frontend|Frontend]] — index.html, 8 módulos JS, style.css
+- [[10 - Proyectos/TemplateTest/Admin Panel|Admin Panel]] — admin.html, admin.js, 12 pestañas CRUD
 
 ### Operaciones
-- [[TemplateTest/Deployment|Deployment]] — Vercel + GAS, configuración one-click
-- [[TemplateTest/Guía para Usuario|Guía para Usuario]] — Manual del comprador
+- [[10 - Proyectos/TemplateTest/Deployment|Deployment]] — Vercel + GAS, configuración one-click
+- [[10 - Proyectos/TemplateTest/Guía para Usuario|Guía para Usuario]] — Manual del comprador
 
 ### Registro
-- [[TemplateTest/Seguridad - Auditoria|Seguridad — Auditoría]] — Controles implementados
-- [[TemplateTest/Decisiones Técnicas|Decisiones Técnicas]] — ADR del proyecto
+- [[10 - Proyectos/TemplateTest/Seguridad - Auditoria|Seguridad — Auditoría]] — Controles implementados
+- [[10 - Proyectos/TemplateTest/Decisiones Técnicas|Decisiones Técnicas]] — ADR del proyecto
 
 ### Producto
-- [[TemplateTest/Brand y Producto|Brand y Producto]] — Propuesta de valor, mercado, pricing
+- [[10 - Proyectos/TemplateTest/Brand y Producto|Brand y Producto]] — Propuesta de valor, mercado, pricing
 
 ---
 
@@ -49,7 +53,7 @@ tags: [proyecto/activo, frontend, template, comercial, gas]
 | Seguridad | SHA-256 × 1000 iteraciones, rate limiting, CSRF, CSP, audit log |
 | Galería | Drag & drop reorder, lazy loading, lightbox |
 | Admin CRUD | Servicios, galería, reseñas, FAQ, profesionales, horarios, clientes, bookings |
-| Última auditoría | Julio 2026 — ver [[TemplateTest/Seguridad - Auditoria]] |
+| Última auditoría | Julio 2026 — ver [[10 - Proyectos/TemplateTest/Seguridad - Auditoria]] |
 
 ## Historial de desarrollo
 

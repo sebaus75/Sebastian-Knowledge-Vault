@@ -1,5 +1,6 @@
 ---
 tags: [adr, arquitectura, decisiones]
+created: 2026-07-24
 ---
 # Decisiones Técnicas
 
@@ -42,7 +43,7 @@ tags: [adr, arquitectura, decisiones]
 
 **Contexto inicial**: El booking GET era simple, rápido de implementar y Google Calendar lo soportaba.
 
-**Decisión posterior (ADR-003b)**: Mover cancelación de GET a POST por seguridad. Ver [[Isaac Torres - Wolf Barber/Seguridad - Auditoria]].
+**Decisión posterior (ADR-003b)**: Mover cancelación de GET a POST por seguridad. Ver [[10 - Proyectos/Isaac Torres - Wolf Barber/Seguridad - Auditoria]].
 
 **Razón**: GET exponía folios en logs y permitía CSRF básico. POST requiere body JSON y no es encadenable por `<img>` o `<script>`.
 

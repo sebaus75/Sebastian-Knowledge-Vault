@@ -1,5 +1,6 @@
 ---
 tags: [frontend, html, css, javascript]
+created: 2026-07-24
 ---
 # Frontend
 

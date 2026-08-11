@@ -1,5 +1,6 @@
 ---
 tags: [backend, gas, google-apps-script, api]
+created: 2026-07-25
 ---
 # Backend — Google Apps Script
 

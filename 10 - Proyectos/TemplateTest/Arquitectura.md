@@ -1,5 +1,6 @@
 ---
 tags: [arquitectura, frontend, backend, estructura]
+created: 2026-07-25
 ---
 # Arquitectura
 

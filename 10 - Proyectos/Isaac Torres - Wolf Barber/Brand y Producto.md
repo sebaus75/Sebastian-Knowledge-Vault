@@ -1,5 +1,6 @@
 ---
 tags: [brand, diseño, producto]
+created: 2026-07-24
 ---
 # Brand y Producto
 

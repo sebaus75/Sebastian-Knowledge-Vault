@@ -1,5 +1,6 @@
 ---
 tags: [seguridad, auditoria, backend, frontend, hardening]
+created: 2026-07-25
 ---
 # Seguridad — Auditoría
 

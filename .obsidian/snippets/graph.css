@@ -1,0 +1,106 @@
+/* ============================================================
+   Graph View - Premium Theme
+   Estilo visual para la vista de grafo (global y local).
+   Aplica variables de color propias del grafo de Obsidian.
+   ============================================================ */
+
+.graph-view {
+  position: relative;
+}
+
+/* ---------- Tema oscuro (default) ---------- */
+body.theme-dark .graph-view {
+  --graph-line: rgba(255, 255, 255, 0.07);
+  --graph-node: #a8b2d0;
+  --graph-node-focused: #ffd166;
+  --graph-node-tag: #e8a33d;
+  --graph-node-attachment: #6cc98f;
+  --graph-node-unresolved: rgba(255, 255, 255, 0.22);
+  --graph-line-focused: rgba(255, 209, 102, 0.85);
+  --graph-label: #cfd6e4;
+}
+
+/* ---------- Tema claro ---------- */
+body.theme-light .graph-view {
+  --graph-line: rgba(0, 0, 0, 0.10);
+  --graph-node: #5b6aa8;
+  --graph-node-focused: #d9920c;
+  --graph-node-tag: #b9771f;
+  --graph-node-attachment: #2f9e5f;
+  --graph-node-unresolved: rgba(0, 0, 0, 0.20);
+  --graph-line-focused: rgba(217, 146, 12, 0.85);
+  --graph-label: #3d4468;
+}
+
+/* ---------- Nodos y aristas ---------- */
+.graph-view.color-fill,
+.graph-view.color-circle {
+  fill: var(--graph-node);
+  transition: fill 0.15s ease;
+}
+
+.graph-view.color-line {
+  stroke: var(--graph-line);
+  transition: stroke 0.15s ease;
+}
+
+.graph-view.color-arrow {
+  stroke: var(--graph-line);
+  fill: var(--graph-line);
+}
+
+.graph-view.color-fill-tag {
+  fill: var(--graph-node-tag);
+}
+
+.graph-view.color-fill-attachment {
+  fill: var(--graph-node-attachment);
+}
+
+.graph-view.color-fill-unresolved {
+  fill: var(--graph-node-unresolved);
+}
+
+.graph-view.color-text {
+  fill: var(--graph-label);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Foco / seleccion ---------- */
+.graph-view.color-fill-highlight {
+  fill: var(--graph-node-focused);
+  filter: drop-shadow(0 0 5px rgba(255, 209, 102, 0.55));
+}
+
+.graph-view.color-line-highlight {
+  stroke: var(--graph-line-focused);
+  stroke-width: 2px;
+}
+
+/* ---------- Fondo: vineta sutil para profundidad ---------- */
+.graph-view::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 45%,
+    rgba(0, 0, 0, 0.22) 100%
+  );
+}
+
+/* ---------- Nodo en hover: resaltar ------------- */
+.graph-view .graph-node:hover {
+  filter: brightness(1.25);
+}
+
+/* ---------- Texto de labels: sombra para legibilidad ---------- */
+.graph-view .graph-label {
+  paint-order: stroke;
+  stroke: var(--background-primary);
+  stroke-width: 2px;
+  stroke-linejoin: round;
+}
