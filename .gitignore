@@ -1,4 +1,4 @@
-# API keys and secrets
+﻿# API keys and secrets
 .obsidian/plugins/*/data.json
 
 # Workspace layout (personal, machine-specific)
@@ -14,3 +14,7 @@ Thumbs.db
 
 # Temp files
 *.tmp
+
+# Plugin backups (may contain private keys)
+.obsidian/plugins/*/data.json.bak
+
