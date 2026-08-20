@@ -6,7 +6,7 @@ tags: [proyecto, plan, mejoras, pendiente]
 
 # Plan — Áreas de Mejora del sistema cerebro
 
-Plan de mejora continua detectado al cierre del plan principal (Fases 1-5, 2026-08-19). **P1 completo (01/02/03) RESUELTO el 2026-08-19**. Resto sin implementar: cada área es candidata a sesión propia. Prioridad restante: P2 (medio), P3 (bajo).
+Plan de mejora continua detectado al cierre del plan principal (Fases 1-5, 2026-08-19). **COMPLETO (P1-P3) RESUELTO el 2026-08-19**. Histórico: cada área se cerró con implementación o decisión documentada abajo.
 
 ## P1-01 — Validar el acceso MCP real ✅ RESUELTO 2026-08-19
 
@@ -25,39 +25,34 @@ Plan de mejora continua detectado al cierre del plan principal (Fases 1-5, 2026-
 - Plugin `vault-brain-lifecycle` (session.deleted): consulta mensajes de la sesión (`client.session.messages`, SDK `@opencode-ai/sdk`) y suma `cost`/`input`/`output` de parts `step-finish`; appenda `- [tokens ...]` al Registro del día.
 - Verificado contra sesión real: in 243k / out 20.7k / modelo `deepseek-v4-flash-free`. Nota: el evento `session.deleted` no trae tokens; hay que sumarlos por mensaje.
 
-## P2-01 — Modelo por tipo de tarea
+## P2-01 — Modelo por tipo de tarea ✅ RESUELTO 2026-08-19 (decisión)
 
-- **Detalle**: opcional mencionado en el plan (Fase 4): modelo barato para mantenimiento, caro para diseño.
-- **Mejora**: doc en el MANIFEST (columna "modelo sugerido") + config `opencode.json` por proyecto cuando aplique; evaluar si el ahorro real justifica la complejidad.
+- Columna **"Modelo sugerido"** añadida al MANIFEST (`barato` para `registro`/`sistema-cerebro`; `estándar` para `produccion`/diseño).
+- **Decisión**: no se fija `model` por proyecto — el ahorro no justifica la complejidad hoy. La columna queda como guía si algún día aplica.
 
-## P2-02 — Exponer `vault-health` como comando TUI
+## P2-02 — Exponer `vault-health` como comando TUI ✅ RESUELTO 2026-08-19
 
-- **Detalle**: la skill existe pero exige que el agente la cargue.
-- **Mejora**: comando `/vault-health` en `~/.config/opencode/commands/` que invoca la skill y muestra el reporte en TUI; útil para inspección manual sin conversar.
-- **Verificación**: `/vault-health` responde checklist en cualquier directorio.
+- Comando `/vault-health` en `~/.config/opencode/commands/` (formato `goal-orch.md`): carga la skill y ejecuta la checklist.
+- **Verificación pendiente en TUI**: `/vault-health` responde checklist desde cualquier directorio.
 
-## P2-03 — Automatizar renovación del certificado/API key del plugin REST API
+## P2-03 — Automatizar renovación del certificado/API key del plugin REST API ✅ RESUELTO 2026-08-19
 
-- **Detalle**: al reiniciar Obsidian el plugin puede regenerar cert y API key → MCP degrada a filesystem silenciosamente.
-- **Mejora**: script `mcp-health.ps1` que verifica el MCP (GET /mcp/ con token) y avisa/actualiza config en `session.created`; o configurar token estático en el plugin.
-- **Verificación**: 0 sesiones degradadas por cert en 2 semanas.
+- Script `mcp-health.ps1` (GET /mcp/ con bearer token; exit 0 OK / 1 FAIL con instrucciones) + hook en `session.created` del plugin: si FAIL → log "MCP degradado".
+- Verificado el camino FAIL en vivo (Obsidian cerrado → puerto 27124 no escucha → script avisa). Camino OK queda para sesión con Obsidian abierto.
 
-## P3-01 — Actualización semestral de skills de terceros
+## P3-01 — Actualización semestral de skills de terceros ✅ RESUELTO 2026-08-19
 
-- **Detalle**: las 24 skills de terceros no se auditan (las propias sí, vía INDICE).
-- **Mejora**: checklist semestral con `vault-health` (versiones/recencia de autor), promoción de las que el usuario adapte a la vault.
+- Sección 7 "Skills (auditoría semestral)" añadida al checklist de `vault-health` (recencia del autor, candidatas a promoción, cadencia semestral).
 
-## P3-02 — Portabilidad multi-máquina
+## P3-02 — Portabilidad multi-máquina ✅ RESUELTO 2026-08-19
 
-- **Detalle**: rutas absolutas (`C:\Users\sebas\...`) en scripts, plugin y skills; otra máquina los rompe.
-- **Mejora**: relativizar paths (convención `~vault/` o variable de entorno `VAULT_PATH`) y documentar clonado del setup (config + vault git).
-- **Verificación**: clonar en máquina de prueba y ejecutar `sync-skills.ps1`.
+- Convención `VAULT_PATH` (env var con fallback a ruta local) en `backup-vault.ps1`, `sync-skills.ps1`, plugin `vault-brain-lifecycle.js`; documentada en skills `vault-brain` y `vault-health`.
+- Nota [[10 - Proyectos/Mantenimiento y seguridad/Setup Multi-Máquina]] con pasos de clonado (git + config + cert + tareas).
 
-## P3-03 — Log semanal de salud automático
+## P3-03 — Log semanal de salud automático ✅ RESUELTO 2026-08-19
 
-- **Detalle**: `vault-health` es on-demand.
-- **Mejora**: tarea programada (Task Scheduler) que corre la skill vía `opencode run` y escribe el reporte al Registro de cada lunes.
-- **Verificación**: entrada de salud en el registro el lunes siguiente.
+- Script `health-weekly.ps1` (corre `opencode run` con la skill y appenda el reporte al Registro; UTF-8 + sin ANSI).
+- Tarea Task Scheduler **`Vault Health Semanal`** (lun 08:00) creada. Validación de pipeline en vivo: reporte real anexado al Registro 2026-08-19 (detectó 5 posibles enlaces rotos → **todos verificados como falsos positivos**; causa: ruido de codificación corregido en el script).
 
 ## Criterio de priorización
 

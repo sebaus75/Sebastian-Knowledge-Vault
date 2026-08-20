@@ -16,20 +16,20 @@ Snapshot de trabajo. Máximo 2KB. Detalle en `STATUS.md` de cada proyecto (mapa 
 | Suplehuges | `propuesta-comercial` | 2026-08-12 | Completar F0 migración + llamada con Santiago |
 | TemplateTest | `listo-empaquetar` | 2026-08-10 | Empaquetar producto ($30k) + deploy demo |
 | El Legado | `registro` | 2026-08-19 | Documentado — decidir alcance (pulido+deploy vs producto) |
-| Mantenimiento y seguridad | `sistema-cerebro` | 2026-08-19 | P1 cerrado (MCP, tokens, push); primera tarea real de proyecto |
+| Mantenimiento y seguridad | `sistema-cerebro` | 2026-08-19 | Plan de mejoras P1-P3 cerrado; health-check semanal automático |
 | Proyectos CAD | `registro` | 2026-08-19 | Documentado — runbook + decidir alcance |
 | Sentido Creativo | `asesoria-ia` | 2026-08-19 | Elegir primer entregable IA |
 
 ## Última sesión
 
-- **2026-08-19** — Sistema cerebro Fases 1-5 + **P1 del plan de mejoras (MCP real, tokens, push)**. Detalle: [[90 - Sistema/Registros/2026-08-19]].
+- **2026-08-19** — Sistema cerebro completo: Fases 1-5 + P1-P3 del plan de mejoras (MCP+health-check, tokens, push, `/vault-health`, `VAULT_PATH`, salud semanal) + auditoría. Detalle: [[90 - Sistema/Registros/2026-08-19]].
 - **2026-08-12** — Suplehuges: F0 de migración commiteada (vault actualizada). Detalle: [[90 - Sistema/Registros/2026-08-12]].
 - **2026-08-10** — Instalación del sistema cerebro + MCP + auditoría 80 enlaces. Detalle: [[90 - Sistema/Registros/2026-08-10]].
 
 ## Pendientes globales
 
 - [x] `00 - Inbox/` revisado — solo nota de bienvenida (2026-08-19).
-- [ ] P2-P3 del plan de mejoras, por decisión del usuario.
+- [x] Plan de mejoras del sistema cerebro P1-P3 cerrado (2026-08-19).
 
 ## Sistema cerebro (leer antes de actuar)
 

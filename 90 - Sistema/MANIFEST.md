@@ -10,15 +10,17 @@ tags: [meta, sistema, enrutamiento]
 
 ## Mapa de proyectos
 
-| Carpeta de proyecto (`Proyectos Open Code/`) | Carpeta en vault (`10 - Proyectos/`) | Fase | Estado | Skills asociadas |
-|---|---|---|---|---|
-| `IsaacTorres/` | [[10 - Proyectos/Isaac Torres - Wolf Barber\|Isaac Torres - Wolf Barber]] | `produccion` | Activo | `wolf-barber-booking` |
-| `SupleHuges/` | [[10 - Proyectos/Suplehuges\|Suplehuges]] | `propuesta-comercial` | Activo | — |
-| `TemplateTest/` | [[10 - Proyectos/TemplateTest\|TemplateTest]] | `listo-empaquetar` | Activo | — |
-| `El Legado/` | [[10 - Proyectos/El Legado\|El Legado]] | `registro` | Activo | — |
-| `Mantenimiento y seguridad/` | [[10 - Proyectos/Mantenimiento y seguridad\|Mantenimiento y seguridad]] | `sistema-cerebro` | Activo | `vault-brain` |
-| `Proyectos CAD/` | [[10 - Proyectos/Proyectos CAD\|Proyectos CAD]] | `registro` | Activo | — |
-| `Sentido Creativo/` | [[10 - Proyectos/Sentido Creativo\|Sentido Creativo]] | `asesoria-ia` | Activo | — |
+| Carpeta de proyecto (`Proyectos Open Code/`) | Carpeta en vault (`10 - Proyectos/`) | Fase | Estado | Modelo sugerido | Skills asociadas |
+|---|---|---|---|---|---|
+| `IsaacTorres/` | [[10 - Proyectos/Isaac Torres - Wolf Barber\|Isaac Torres - Wolf Barber]] | `produccion` | Activo | `estándar` | `wolf-barber-booking` |
+| `SupleHuges/` | [[10 - Proyectos/Suplehuges\|Suplehuges]] | `propuesta-comercial` | Activo | `estándar` | — |
+| `TemplateTest/` | [[10 - Proyectos/TemplateTest\|TemplateTest]] | `listo-empaquetar` | Activo | `estándar` | — |
+| `El Legado/` | [[10 - Proyectos/El Legado\|El Legado]] | `registro` | Activo | `barato` | — |
+| `Mantenimiento y seguridad/` | [[10 - Proyectos/Mantenimiento y seguridad\|Mantenimiento y seguridad]] | `sistema-cerebro` | Activo | `barato` | `vault-brain` |
+| `Proyectos CAD/` | [[10 - Proyectos/Proyectos CAD\|Proyectos CAD]] | `registro` | Activo | `barato` | — |
+| `Sentido Creativo/` | [[10 - Proyectos/Sentido Creativo\|Sentido Creativo]] | `asesoria-ia` | Activo | `estándar` | — |
+
+> **Modelo sugerido** (P2-01, decisión 2026-08-19): `barato` (deepseek-v4-flash-free) para fases `registro`/`sistema-cerebro`/búsquedas; `estándar` para `produccion`/diseño. No se fija `model` por proyecto: el ahorro no justifica la complejidad hoy; la columna documenta la guía si algún día aplica.
 
 ## Reglas de uso
 
