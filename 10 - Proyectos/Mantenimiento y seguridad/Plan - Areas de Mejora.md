@@ -8,17 +8,16 @@ tags: [proyecto, plan, mejoras, pendiente]
 
 Plan de mejora continua detectado al cierre del plan principal (Fases 1-5, 2026-08-19). **NO implementar ahora**: cada área es candidata a sesión propia. Prioridad: P1 (alto valor), P2 (medio), P3 (bajo).
 
-## P1-01 — Validar el acceso MCP real (hoy se usó filesystem toda la sesión)
+## P1-01 — Validar el acceso MCP real (hoy se usa filesystem)
 
-- **Detalle**: el plugin Obsidian Local REST API requiere `NODE_EXTRA_CA_CERTS` + cert confiable; en esta implementación todas las lecturas/escrituras fueron por sistema de archivos directo.
+- **Detalle**: el plugin Obsidian Local REST API requiere `NODE_EXTRA_CA_CERTS` + cert confiable; la implementación y este cierre usaron sistema de archivos directo.
 - **Mejora**: configurar el certificado de una vez (importar al store + variable de entorno permanente), reiniciar opencode y probar `vault_*` en una sesión real; decidir si el fallback filesystem queda como respaldo documentado (sí) o como primario.
 - **Verificación**: `vault_list`/`vault_read` responden; sesión con MCP registra menos tokens que la misma vía filesystem.
 
-## P1-02 — Backup remoto (GitHub) — pendiente del plan principal
+## P1-02 — Backup remoto (GitHub) ✅ RESUELTO 2026-08-19
 
-- **Detalle**: `backup-vault.ps1` commitea local; push se activa solo si existe remote.
-- **Mejora**: crear repo privado (pasos del usuario documentados en registro 2026-08-19), verificar push automático en `session.deleted`, y agendar respaldo semanal complementario (Task Scheduler).
-- **Verificación**: `git remote -v` no vacío; commit + push sin intervención en una sesión de prueba.
+- creado `https://github.com/sebaus75/Sebastian-Knowledge-Vault` (privado, push hecho).
+- **Restante (menor)**: verificar el push automático del plugin en un cierre de sesión real y agendar respaldo semanal complementario (Task Scheduler).
 
 ## P1-03 — Métricas de tokens por sesión (requisito 6 del plan original: modelos de pago)
 

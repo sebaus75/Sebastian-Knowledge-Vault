@@ -16,7 +16,7 @@ Snapshot de trabajo. Máximo 2KB. Detalle en `STATUS.md` de cada proyecto (mapa 
 | Suplehuges | `propuesta-comercial` | 2026-08-12 | Completar F0 migración + llamada con Santiago |
 | TemplateTest | `listo-empaquetar` | 2026-08-10 | Empaquetar producto ($30k) + deploy demo |
 | El Legado | `registro` | 2026-08-19 | Revisar HTML y documentar proyecto |
-| Mantenimiento y seguridad | `sistema-cerebro` | 2026-08-19 | Circuito operativo (opcional: remote GitHub) |
+| Mantenimiento y seguridad | `sistema-cerebro` | 2026-08-19 | Circuito operativo (remote GitHub ✅) |
 | Proyectos CAD | `registro` | 2026-08-19 | Documentar pipeline Python |
 | Sentido Creativo | `asesoria-ia` | 2026-08-19 | Elegir primer entregable IA |
 
@@ -29,7 +29,6 @@ Snapshot de trabajo. Máximo 2KB. Detalle en `STATUS.md` de cada proyecto (mapa 
 ## Pendientes globales
 
 - [ ] Revisar `00 - Inbox/` (si hay notas sin procesar).
-- [ ] Configurar remote de GitHub para la vault (backup semanal real; commit local ya automático).
 
 ## Sistema cerebro (leer antes de actuar)
 

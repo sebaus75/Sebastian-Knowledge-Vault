@@ -14,6 +14,7 @@ tags: [proyecto, status, sistema, vault]
 
 ## Hecho (más reciente primero)
 
+- [2026-08-19] **Repo GitHub activado** — `gh` instalado y autenticado (sebaus75); repo privado creado y pusheado; backup automático pasa a push remoto en cada cierre; sin secretos rastreados (gitignore cubre data.json del plugin). TODO el plan queda 100% operativo.
 - [2026-08-19] **Cierre de implementación** — Home.md actualizado (MOC raíz con los 7 proyectos + MANIFEST + skills); plan de mejoras P1-P3 creado en [[10 - Proyectos/Mantenimiento y seguridad/Plan - Areas de Mejora]] (no ejecutado); entrega con explicación de cumplimiento de las 7 solicitudes + pasos para repo GitHub.
 - [2026-08-19] **Fase 5** — Validación end-to-end en directorio neutro (protocolo global cargado, lectura mínima respetada, skills automáticas correctas); auditoría final de límites (CONTEXT 2019 B, STATUS ≤2.5 KB, mantenimiento re-recortado a 2,336 B); plan CERRADO. Detalle: [[90 - Sistema/Registros/2026-08-19]].
 - [2026-08-19] **Fase 4** — Límites auditados (Suplehuges 3.22→2.43 KB); skill `vault-brain` §7 "Presupuesto de lectura"; convención ADR; `Decisiones Técnicas.md` (ADR-001..004).
