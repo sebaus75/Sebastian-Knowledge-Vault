@@ -68,7 +68,32 @@ Elegir la capa mínima que resuelve la tarea (ahorra tokens; no leer más de lo 
 | Mantenimiento de la vault | CONTEXT + Inbox + health-check | Registro + índices + `40 - Archivo/` |
 | Sesión de documentación | CONTEXT → MANIFEST (destino según tabla del MANIFEST) | Carpeta del proyecto / Recursos / Registro |
 
+## 7. Presupuesto de lectura (coste por operación)
+
+Elegir **siempre la operación más barata que resuelva la tarea**. Coste aproximado (lectura real consumida, no tamaño del archivo):
+
+| Operación | Coste aprox. | Cuándo |
+|---|---|---|
+| `CONTEXT.md` | ~2 KB | Todo inicio de sesión |
+| `MANIFEST.md` | ~1.5 KB | Solo si el trabajo toca un proyecto |
+| `STATUS.md` del proyecto | ~2-3 KB | Toda tarea de proyecto |
+| `vault_get_document_map` (headings+frontmatter) | <1 KB | Antes de abrir una nota, para saber qué contiene |
+| `vault_read` dirigido (offset/limit) | 1–5 KB | Solo la sección/nota que se necesita |
+| `search_simple` / `search_query` | resultados cortos | Para localizar sin abrir archivos |
+| `vault_list` | pequeño | Inventarios, no contenido |
+
+**Regla de decisión (en orden):**
+
+1. ¿Responde `CONTEXT.md`? Leer ese y **parar**.
+2. ¿Toca un proyecto? Añadir `STATUS.md` del proyecto.
+3. ¿Necesita contenido de una nota? `vault_get_document_map` → si el heading buscado existe, `read` dirigido.
+4. ¿No sabe dónde está? `search_*` → luego pasos 2-3 sobre el resultado.
+5. Solo si el MCP falla: filesystem con la misma lógica (leer mas no volcar).
+
+**Prohibido**: leer carpetas enteras, listar proyectos completos, abrir notas "por contexto" o hacer `find`/`grep` globales de la vault como primera acción.
+
 ## Tokens
 
 - Máximos: CONTEXT ≤2KB, STATUS ≤3KB. Si crecen, mover detalle a notas/registros.
 - Leer solo lo necesario; el conocimiento vive en las notas, no en la conversación.
+- ADR: decisiones de impacto → nota `Decisiones Técnicas.md` en la carpeta del proyecto (formato contexto → decisión → consecuencia); decisiones menores → sección "Decisiones" del STATUS.

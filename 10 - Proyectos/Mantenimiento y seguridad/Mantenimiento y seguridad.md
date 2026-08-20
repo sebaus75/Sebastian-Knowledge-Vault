@@ -18,6 +18,7 @@ tags: [proyecto/activo, sistema, meta, vault, opencode]
 ## Map of Content
 
 - [[10 - Proyectos/Mantenimiento y seguridad/STATUS|STATUS]] — estado operativo y plan por fases
+- [[10 - Proyectos/Mantenimiento y seguridad/Decisiones Técnicas|Decisiones Técnicas]] — ADR del sistema cerebro (001-004)
 - [[CONTEXT]] — estado global de la vault
 - [[90 - Sistema/MANIFEST]] — enrutamiento proyecto → vault
 - [[AGENTS]] — contrato y protocolo de la vault

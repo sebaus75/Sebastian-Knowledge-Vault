@@ -10,34 +10,33 @@ tags: [proyecto, status, sistema, vault]
 
 ## Fase actual
 
-`sistema-cerebro` — Implementación del plan "Obsidian como cerebro de todos los agentes" (5 fases).
+`sistema-cerebro` — Plan "Obsidian como cerebro de todos los agentes": **Fases 1-5 completadas** (validación end-to-end OK desde directorio neutro). Decisiones de arquitectura: [[10 - Proyectos/Mantenimiento y seguridad/Decisiones Técnicas]] (ADR-001..004).
 
 ## Hecho (más reciente primero)
 
-- [2026-08-19] **Fase 3 completada** — Plugin `vault-brain-lifecycle` (session.created → sync skills; session.deleted → backup git; validado), script `backup-vault.ps1` (primer commit real de la vault), skill `vault-health` (checklist completa). **Ojo**: vault sin remote de GitHub (pendiente desde 2026-08-10). Detalle: [[90 - Sistema/Registros/2026-08-19]].
-- [2026-08-19] **Fases 2A y 2B completadas** — Auditoría de skills (42 → 26: 16 eliminadas a respaldo, 2 migradas) y skills en la vault (`30 - Recursos/Skills/` + `sync-skills.ps1` probado + `INDICE.md` + `FEEDBACK.md`). Detalle: [[90 - Sistema/Registros/2026-08-19]].
-- [2026-08-19] **Fase 1 completada** — Universalidad y enrutamiento: AGENTS.md global creado (`~/.config/opencode/AGENTS.md`), MANIFEST.md creado (mapa de 7 proyectos), skill `vault-brain` refinado (enrutamiento por tipo de tarea + auto-provisioning), auto-provisioning de 4 proyectos (El Legado, Mantenimiento y seguridad, Proyectos CAD, Sentido Creativo). Detalle: [[90 - Sistema/Registros/2026-08-19]].
-- [2026-08-10] Instalación del sistema cerebro (AGENTS.md, CONTEXT, STATUS, registros) + conexión MCP + auditoría de enlaces. Detalle: [[90 - Sistema/Registros/2026-08-10]].
+- [2026-08-19] **Fase 5** — Validación end-to-end en directorio neutro (protocolo global cargado, lectura mínima respetada, skills automáticas correctas); auditoría final de límites (CONTEXT 2019 B, STATUS ≤2.5 KB, mantenimiento re-recortado a 2,336 B); plan CERRADO. Detalle: [[90 - Sistema/Registros/2026-08-19]].
+- [2026-08-19] **Fase 4** — Límites auditados (Suplehuges 3.22→2.43 KB); skill `vault-brain` §7 "Presupuesto de lectura"; convención ADR; `Decisiones Técnicas.md` (ADR-001..004).
+- [2026-08-19] **Fase 3** — Plugin `vault-brain-lifecycle` (session.created → sync; session.deleted → backup); `backup-vault.ps1` probado (commits reales); skill `vault-health`.
+- [2026-08-19] **Fases 2A/2B** — Auditoría skills 42→26 (16 a respaldo); skills propias en la vault + `sync-skills.ps1` + `INDICE.md` + `FEEDBACK.md`.
+- [2026-08-19] **Fase 1** — AGENTS.md global; `90 - Sistema/MANIFEST.md` (7 proyectos); `vault-brain` refinado (enrutamiento + auto-provisioning §1.1 + capa por tarea §6); 4 proyectos auto-provisionados.
+- [2026-08-10] Sistema cerebro inicial (AGENTS.md, CONTEXT, STATUS, registros) + MCP + auditoría 80 enlaces.
 
 ## En progreso
 
-- [ ] **Fase 3 cierre** — Configurar remote de GitHub para la vault (respaldo semanal real; pendiente desde 2026-08-10).
+- (Sin tareas en progreso — plan cerrado)
 
 ## Bloqueado / Pendiente
 
-- [ ] **Fase 4** — Auditoría de límites de tokens (CONTEXT/STATUS) + ADR por proyecto (sección "Decisiones" en MOCs).
-- [ ] **Fase 5** — Validación end-to-end (sesión desde directorio neutro) y métricas de tokens antes/después.
+- [ ] Configurar remote de GitHub (backup remoto pendiente desde 2026-08-10; commit local ya automático — decisión: no crear repo sin `gh`/token en el entorno). Detalle: [[90 - Sistema/Registros/2026-08-19]].
 
 ## Decisiones recientes
 
-- [2026-08-19] La vault es el cerebro de **toda** sesión de OpenCode vía AGENTS.md global (no solo proyectos con AGENTS.md propio).
-- [2026-08-19] Enrutamiento centralizado en `90 - Sistema/MANIFEST.md`; proyectos sin carpeta en vault se auto-provisionan sin preguntar.
-- [2026-08-19] Sync de skills: script PowerShell + hook de inicio (fuente de verdad: vault). Hooks: plugin propio mínimo.
-- [2026-08-19] Las 42 skills actuales se auditan antes de migrar (fusionar/eliminar/mejorar).
+- [2026-08-19] ADR-001..004: cerebro global, skills con fuente en vault, backup automático, límites de tokens + ADR-005: validación en producción aprobada. Ver [[10 - Proyectos/Mantenimiento y seguridad/Decisiones Técnicas]].
 
 ## Próxima sesión
 
-- **Fase 2A**: auditar las 42 skills (leer descripciones/estructura, detectar redundancias) y presentar factura de cambios.
+- Ejercitar el circuito con tareas reales de proyectos (Wolf Barber, Suplehuges, TemplateTest); correr `vault-health` ante cualquier anomalía.
+- Opcional: conectar remote de GitHub.
 
 ---
 _Actualizar al final de cada sesión. Ver `AGENTS.md` (protocolo) y `90 - Sistema/Registros/`._

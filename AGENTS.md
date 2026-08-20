@@ -53,6 +53,7 @@ Al mover un proyecto a otra fase (`fase` en frontmatter del MOC):
 - **Frontmatter** (en notas): `created: YYYY-MM-DD`, `updated: YYYY-MM-DD` (editar solo al cambiar el contenido), `tags`, y en MOCs de proyecto: `estado: Activo|Pausado|Archivado`, `fase: <libre por proyecto>`.
 - **Fases por proyecto** (ejemplos): Wolf Barber → `produccion`; Suplehuges → `propuesta-comercial`; TemplateTest → `listo-empaquetar`.
 - **Checkboxes**: `- [ ]` pendiente, `- [x]` hecho. STATUS usa esta forma.
+- **Decisiones de impacto**: nota `Decisiones Técnicas.md` en la carpeta del proyecto (ADR: contexto → decisión → consecuencia, append-only) + enlace desde el MOC; decisiones menores: sección "Decisiones" del STATUS.
 - **Fechas** ISO `YYYY-MM-DD` siempre.
 - **Naming**: `Nombre - Descripcion.md`; enlaces a ruta completa desde raíz (`[[10 - Proyectos/...]]`) cuando haya basenames duplicados.
 
