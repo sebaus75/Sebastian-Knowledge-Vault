@@ -14,13 +14,14 @@ tags: [proyecto, status, sistema, vault]
 
 ## Hecho (más reciente primero)
 
+- [2026-08-19] **Fase 3 completada** — Plugin `vault-brain-lifecycle` (session.created → sync skills; session.deleted → backup git; validado), script `backup-vault.ps1` (primer commit real de la vault), skill `vault-health` (checklist completa). **Ojo**: vault sin remote de GitHub (pendiente desde 2026-08-10). Detalle: [[90 - Sistema/Registros/2026-08-19]].
 - [2026-08-19] **Fases 2A y 2B completadas** — Auditoría de skills (42 → 26: 16 eliminadas a respaldo, 2 migradas) y skills en la vault (`30 - Recursos/Skills/` + `sync-skills.ps1` probado + `INDICE.md` + `FEEDBACK.md`). Detalle: [[90 - Sistema/Registros/2026-08-19]].
 - [2026-08-19] **Fase 1 completada** — Universalidad y enrutamiento: AGENTS.md global creado (`~/.config/opencode/AGENTS.md`), MANIFEST.md creado (mapa de 7 proyectos), skill `vault-brain` refinado (enrutamiento por tipo de tarea + auto-provisioning), auto-provisioning de 4 proyectos (El Legado, Mantenimiento y seguridad, Proyectos CAD, Sentido Creativo). Detalle: [[90 - Sistema/Registros/2026-08-19]].
 - [2026-08-10] Instalación del sistema cerebro (AGENTS.md, CONTEXT, STATUS, registros) + conexión MCP + auditoría de enlaces. Detalle: [[90 - Sistema/Registros/2026-08-10]].
 
 ## En progreso
 
-- [ ] **Fase 3** — Plugin propio de hooks (`session.created` → sync skills + pull git; fin de sesión → cierre forzado); skill `vault-health`; backup git semanal.
+- [ ] **Fase 3 cierre** — Configurar remote de GitHub para la vault (respaldo semanal real; pendiente desde 2026-08-10).
 
 ## Bloqueado / Pendiente
 
