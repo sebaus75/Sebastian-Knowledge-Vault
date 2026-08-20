@@ -14,6 +14,7 @@ tags: [proyecto, status, sistema, vault]
 
 ## Hecho (más reciente primero)
 
+- [2026-08-19] **Auditoría general de la vault** — 62 archivos: contradicciones corregidas (MOC Mantenimiento, nota OpenCode, AGENTS), 3 proyectos en `registro` documentados con hechos verificados de su código (El Legado, Proyectos CAD, Sentido Creativo), 0 enlaces rotos, límites OK.
 - [2026-08-19] **P1-01 resuelto** — MCP real operativo tras reiniciar opencode (env+key ya listas); `vault_list`/`vault_read`/`tag_list` probados; MCP primario, filesystem como fallback documentado.
 - [2026-08-19] **P1-03 resuelto** — plugin `vault-brain-lifecycle` registra tokens por sesión en `90 - Sistema/Registros/` (suma parts `step-finish` vía SDK); verificado en sesión real (in 243k / out 20.7k).
 - [2026-08-19] **P1-02 cerrado** — bug corregido: hook ahora usa `backup-vault.ps1 -Push`; tarea semanal `Vault Backup Semanal` (dom 09:00); push a origin verificado manualmente.

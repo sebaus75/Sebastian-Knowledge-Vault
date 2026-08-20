@@ -10,10 +10,11 @@ tags: [proyecto, status, ia, b2b]
 
 ## Fase actual
 
-`asesoria-ia` — Evaluación de dolores y diseño de hoja de ruta de IA (contexto operativo ya documentado en `SentidoCreativo - Context.md`).
+`asesoria-ia` — Mapeo del contexto operativo completado (2026-08-19) en [[10 - Proyectos/Sentido Creativo/Sentido Creativo]] (Safran ancla ~80%, producción bajo pedido, maquinaria láser/UV, Asana + NAS). Pendiente: elegir primer entregable con el cliente.
 
 ## Hecho (más reciente primero)
 
+- [2026-08-19] Contexto operativo mapeado a la vault desde `SentidoCreativo - Context.md` (empresa, mercado, procesos, maquinaria, ecosistema, dolores).
 - [2026-08-19] Registro del proyecto en la vault (MOC + STATUS + MANIFEST) con contexto operativo leído desde la carpeta del proyecto.
 
 ## En progreso

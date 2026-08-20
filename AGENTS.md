@@ -6,7 +6,7 @@ La vault es la memoria de trabajo: qué hay, qué se hizo, qué falta y qué sig
 ## 1. Mapa de carpetas (método PARA)
 
 - `00 - Inbox/` — notas sin procesar. Revisar al inicio; si hay notas, procesarlas antes de otra tarea.
-- `10 - Proyectos/<Proyecto>/` — proyectos con objetivo y fecha de fin. Cada proyecto tiene `MOC.md` (índice), `STATUS.md` (estado) y sus notas.
+- `10 - Proyectos/<Proyecto>/` — proyectos con objetivo y fecha de fin. Cada proyecto tiene su MOC (índice; archivo `<Proyecto>.md`), `STATUS.md` (estado) y sus notas.
 - `20 - Areas/` — responsabilidades continuas (sin fecha de fin).
 - `30 - Recursos/` — material de referencia y conocimiento permanente.
 - `40 - Archivo/` — todo lo cerrado/obsoleto. **Nunca borrar**: archivar aquí.

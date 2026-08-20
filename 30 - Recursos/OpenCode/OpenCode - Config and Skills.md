@@ -7,16 +7,20 @@ created: 2026-07-01
 Herramienta CLI para ingenieria de software asistida por IA.
 
 ## Configuracion
-Archivo: `opencode.json`
+Archivo global: `~/.config/opencode/opencode.jsonc` (la vault activa el MCP de Obsidian desde el AGENTS.md global).
 
-Estructura:
-```json
+Estructura real (2026-08-19):
+```jsonc
 {
-  "permission": { "*": "allow" },
+  "plugin": [
+    ["@prevalentware/opencode-goal-plugin", { "auto_continue": true, "max_auto_turns": 25, "default_token_budget": 200000 }]
+  ],
   "mcp": {
-    "stitch": {
+    "obsidian": {
       "type": "remote",
-      "enabled": false
+      "url": "https://127.0.0.1:27124/mcp/",
+      "enabled": true,
+      "apiKey": "<key del plugin Obsidian Local REST API>"
     }
   }
 }
@@ -36,26 +40,45 @@ Estructura:
 
 ### Isaac Torres
 - Ubicacion: `Proyectos Open Code/IsaacTorres`
-- Skills: Ninguno configurado aun
+- Skills: `wolf-barber-booking` (skill propia, fuente en vault `30 - Recursos/Skills/`)
 - Archivo: opencode.json con MCP Stitch deshabilitado
 
-### Sentido Creativo
-- Ubicacion: `Proyectos Open Code/Sentido Creativo`
-- Contexto disponible en SentidoCreativo - Context.md
+### Otros proyectos configurados (2026-08-19)
+- **SupleHuges** — `Proyectos Open Code/SupleHuges/` — migración Shopify → Supabase + Vercel (F0 commiteada).
+- **El Legado** — `Proyectos Open Code/El Legado/` — landing estática (HTML único).
+- **Proyectos CAD** — `Proyectos Open Code/Proyectos CAD/` — pipeline Python/ezdxf (DXF → PDF).
+- **Sentido Creativo** — `Proyectos Open Code/Sentido Creativo/` — asesoría IA (contexto en `SentidoCreativo - Context.md`).
+- **Mantenimiento y seguridad** — `Proyectos Open Code/Mantenimiento y seguridad/` — sistema cerebro (opencode.json con MCP obsidian + AGENTS.md propio).
 
 ## Goal Plugin (@prevalentware/opencode-goal-plugin)
 
 Plugin que ejecuta goals complejos de forma autonoma con multiples turnos.
 
-### Configuracion global (~/.config/opencode/opencode.jsonc)
+### Configuracion global real (~/.config/opencode/opencode.jsonc, 2026-08-19)
 ```json
 {
-  "plugins": {
-    "goals": {
-      "auto_continue": true,
-      "max_auto_turns": 25,
-      "max_execution_time_minutes": 60,
-      "no_progress_pause": "Whats the status?"
+  "plugin": [
+    [
+      "@prevalentware/opencode-goal-plugin",
+      {
+        "auto_continue": true,
+        "max_auto_turns": 25,
+        "defer_while_tasks_active": true,
+        "default_token_budget": 200000,
+        "max_goal_duration_seconds": 3600,
+        "no_progress_token_threshold": 50,
+        "max_no_progress_turns": 3,
+        "restricted_agents": ["plan"],
+        "allow_goal_execution_from_plan": false
+      }
+    ]
+  ],
+  "mcp": {
+    "obsidian": {
+      "type": "remote",
+      "url": "https://127.0.0.1:27124/mcp/",
+      "enabled": true,
+      "apiKey": "933565a1fb... (vault: .obsidian/plugins/*/data.json)"
     }
   }
 }
