@@ -40,5 +40,5 @@ created: YYYY-MM-DD
 - Git + GitHub
 - Copia local externa semanal
 - Obsidian Sync (opcional, pago)
-- .obsidian/ en .gitignore
+- Config del plugin con secretos (`data.json`, `app.json`, `workspace.json`) en `.gitignore` (no todo `.obsidian/` — así se versionan los plugins)
 - Archivos sensibles: .gitignore
