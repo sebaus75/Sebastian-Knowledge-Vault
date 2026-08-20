@@ -6,24 +6,24 @@ tags: [proyecto, plan, mejoras, pendiente]
 
 # Plan — Áreas de Mejora del sistema cerebro
 
-Plan de mejora continua detectado al cierre del plan principal (Fases 1-5, 2026-08-19). **NO implementar ahora**: cada área es candidata a sesión propia. Prioridad: P1 (alto valor), P2 (medio), P3 (bajo).
+Plan de mejora continua detectado al cierre del plan principal (Fases 1-5, 2026-08-19). **P1 completo (01/02/03) RESUELTO el 2026-08-19**. Resto sin implementar: cada área es candidata a sesión propia. Prioridad restante: P2 (medio), P3 (bajo).
 
-## P1-01 — Validar el acceso MCP real (hoy se usa filesystem)
+## P1-01 — Validar el acceso MCP real ✅ RESUELTO 2026-08-19
 
-- **Detalle**: el plugin Obsidian Local REST API requiere `NODE_EXTRA_CA_CERTS` + cert confiable; la implementación y este cierre usaron sistema de archivos directo.
-- **Mejora**: configurar el certificado de una vez (importar al store + variable de entorno permanente), reiniciar opencode y probar `vault_*` en una sesión real; decidir si el fallback filesystem queda como respaldo documentado (sí) o como primario.
-- **Verificación**: `vault_list`/`vault_read` responden; sesión con MCP registra menos tokens que la misma vía filesystem.
+- Cert en store de Windows + `NODE_EXTRA_CA_CERTS` + API key en `opencode.jsonc` ya estaban; faltaba reiniciar opencode.
+- Tras reiniciar: tools `obsidian_*` cargados y probados (`vault_list` raíz, `vault_read` dirigido, `tag_list`).
+- Decisión: **MCP primario; fallback filesystem documentado** (AGENTS.md de la vault, skill `vault-brain`).
 
 ## P1-02 — Backup remoto (GitHub) ✅ RESUELTO 2026-08-19
 
 - creado `https://github.com/sebaus75/Sebastian-Knowledge-Vault` (privado, push hecho).
-- **Restante (menor)**: verificar el push automático del plugin en un cierre de sesión real y agendar respaldo semanal complementario (Task Scheduler).
+- Push automático en cada cierre verificado (hook ahora usa `-Push`; prueba manual: commit `20:08` + "Everything up-to-date").
+- Respaldo semanal agendado: tarea Task Scheduler `Vault Backup Semanal` (dom 09:00, `backup-vault.ps1 -Push`).
 
-## P1-03 — Métricas de tokens por sesión (requisito 6 del plan original: modelos de pago)
+## P1-03 — Métricas de tokens por sesión ✅ RESUELTO 2026-08-19
 
-- **Detalle**: no hay telemetría de consumo por sesión; la optimización existe (límites + presupuesto §7) pero no se mide.
-- **Mejora**: ampliar el plugin `vault-brain-lifecycle` para registrar en `session.status`/`session.diff` el consumo de tokens de la sesión en el Registro del día (una línea); comparar sesiones antes/después de mejoras.
-- **Verificación**: línea de consumo en `90 - Sistema/Registros/YYYY-MM-DD.md` al cierre de cada sesión.
+- Plugin `vault-brain-lifecycle` (session.deleted): consulta mensajes de la sesión (`client.session.messages`, SDK `@opencode-ai/sdk`) y suma `cost`/`input`/`output` de parts `step-finish`; appenda `- [tokens ...]` al Registro del día.
+- Verificado contra sesión real: in 243k / out 20.7k / modelo `deepseek-v4-flash-free`. Nota: el evento `session.deleted` no trae tokens; hay que sumarlos por mensaje.
 
 ## P2-01 — Modelo por tipo de tarea
 

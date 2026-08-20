@@ -10,19 +10,17 @@ tags: [proyecto, status, sistema, vault]
 
 ## Fase actual
 
-`sistema-cerebro` — Plan "Obsidian como cerebro de todos los agentes": **Fases 1-5 completadas** (validación end-to-end OK desde directorio neutro). Decisiones de arquitectura: [[10 - Proyectos/Mantenimiento y seguridad/Decisiones Técnicas]] (ADR-001..004).
+`sistema-cerebro` — Plan "Obsidian como cerebro de todos los agentes": Fases 1-5 completadas (validación end-to-end OK). Arquitectura: [[10 - Proyectos/Mantenimiento y seguridad/Decisiones Técnicas]] (ADR-001..004). **P1 del plan de mejoras resuelto** (2026-08-19): MCP real activo, métricas de tokens por sesión, push automático a GitHub + backup semanal.
 
 ## Hecho (más reciente primero)
 
-- [2026-08-19] **Cierre de sesión** — entrega de reporte final (cumplimiento de las 7 solicitudes + entregables); pendientes P1-P3 delegados a próxima sesión.
-- [2026-08-19] **Repo GitHub activado** — `gh` instalado y autenticado (sebaus75); repo privado creado y pusheado; backup automático pasa a push remoto en cada cierre; sin secretos rastreados (gitignore cubre data.json del plugin). TODO el plan queda 100% operativo.
-- [2026-08-19] **Cierre de implementación** — Home.md actualizado (MOC raíz con los 7 proyectos + MANIFEST + skills); plan de mejoras P1-P3 creado en [[10 - Proyectos/Mantenimiento y seguridad/Plan - Areas de Mejora]] (no ejecutado); entrega con explicación de cumplimiento de las 7 solicitudes + pasos para repo GitHub.
-- [2026-08-19] **Fase 5** — Validación end-to-end en directorio neutro (protocolo global cargado, lectura mínima respetada, skills automáticas correctas); auditoría final de límites (CONTEXT 2019 B, STATUS ≤2.5 KB, mantenimiento re-recortado a 2,336 B); plan CERRADO. Detalle: [[90 - Sistema/Registros/2026-08-19]].
-- [2026-08-19] **Fase 4** — Límites auditados (Suplehuges 3.22→2.43 KB); skill `vault-brain` §7 "Presupuesto de lectura"; convención ADR; `Decisiones Técnicas.md` (ADR-001..004).
-- [2026-08-19] **Fase 3** — Plugin `vault-brain-lifecycle` (session.created → sync; session.deleted → backup); `backup-vault.ps1` probado (commits reales); skill `vault-health`.
-- [2026-08-19] **Fases 2A/2B** — Auditoría skills 42→26 (16 a respaldo); skills propias en la vault + `sync-skills.ps1` + `INDICE.md` + `FEEDBACK.md`.
-- [2026-08-19] **Fase 1** — AGENTS.md global; `90 - Sistema/MANIFEST.md` (7 proyectos); `vault-brain` refinado (enrutamiento + auto-provisioning §1.1 + capa por tarea §6); 4 proyectos auto-provisionados.
-- [2026-08-10] Sistema cerebro inicial (AGENTS.md, CONTEXT, STATUS, registros) + MCP + auditoría 80 enlaces.
+- [2026-08-19] **P1-01 resuelto** — MCP real operativo tras reiniciar opencode (env+key ya listas); `vault_list`/`vault_read`/`tag_list` probados; MCP primario, filesystem como fallback documentado.
+- [2026-08-19] **P1-03 resuelto** — plugin `vault-brain-lifecycle` registra tokens por sesión en `90 - Sistema/Registros/` (suma parts `step-finish` vía SDK); verificado en sesión real (in 243k / out 20.7k).
+- [2026-08-19] **P1-02 cerrado** — bug corregido: hook ahora usa `backup-vault.ps1 -Push`; tarea semanal `Vault Backup Semanal` (dom 09:00); push a origin verificado manualmente.
+- [2026-08-19] Cierre de sesión — entrega de reporte final de las 7 solicitudes; pendientes P1-P3 delegados a esta sesión (detalle: [[90 - Sistema/Registros/2026-08-19]]).
+- [2026-08-19] Repo GitHub creado y pusheado (sebaus75); backup automático pasa a push remoto; sin secretos rastreados.
+- [2026-08-19] Fases 1-5 del plan sistema cerebro CERRADAS (AGENTS.md global, MANIFEST, auto-provisioning ×4, skills 42→26, skills en vault + sync, plugin de hooks, presupuesto de lectura §7, ADR-001..005, validación end-to-end).
+- [2026-08-10] Sistema cerebro inicial + MCP + auditoría 80 enlaces.
 
 ## En progreso
 
@@ -30,20 +28,18 @@ tags: [proyecto, status, sistema, vault]
 
 ## Bloqueado / Pendiente
 
-- [ ] **P1-01** — Validar acceso MCP real (certificado TLS + prueba `vault_*`; hoy se usa filesystem). Ver [[10 - Proyectos/Mantenimiento y seguridad/Plan - Areas de Mejora]].
-- [ ] **P1-03** — Métricas de tokens por sesión (medir consumo en Registro para modelos de pago).
-- [ ] **Verificar push automático** del plugin en un cierre de sesión real (remote GitHub ya configurado).
-- [ ] Revisar `00 - Inbox/` (pendiente global).
+- (Sin pendientes P1. Siguientes candidatas: P2-01..P2-03 del plan de mejoras, por decisión del usuario.)
 
 ## Decisiones recientes
 
-- [2026-08-19] ADR-001..004: cerebro global, skills con fuente en vault, backup automático, límites de tokens + ADR-005: validación en producción aprobada. Ver [[10 - Proyectos/Mantenimiento y seguridad/Decisiones Técnicas]].
-- [2026-08-19] Repo GitHub privado creado: `https://github.com/sebaus75/Sebastian-Knowledge-Vault` (decisión del usuario, ejecutada por el agente).
+- [2026-08-19] MCP real como vía primaria a la vault; filesystem queda como fallback documentado.
+- [2026-08-19] Telemetría de tokens por sesión activada vía plugin (parts `step-finish` con `@opencode-ai/sdk`).
+- [2026-08-19] ADR-001..005 + repo GitHub privado `sebaus75/Sebastian-Knowledge-Vault`.
 
 ## Próxima sesión
 
-- Atacar pendientes **P1-01** (MCP real) y **P1-03** (métricas de tokens) del [[10 - Proyectos/Mantenimiento y seguridad/Plan - Areas de Mejora|plan de mejoras]]; verificar push automático de backup; revisar `00 - Inbox/`.
-- Si el usuario lo prefiere: primera tarea real de proyecto (Wolf Barber, Suplehuges o TemplateTest) para ejercitar el circuito.
+- P1 cerrado. Siguiente turno natural: primera tarea real de proyecto (Wolf Barber, Suplehuges o TemplateTest) con MCP activo y telemetría; o P2-01/P2-02/P2-03 si el usuario lo pide.
+- El cierre de esta sesión verifica en vivo: línea de tokens en el Registro + push automático del plugin.
 
 ---
 _Actualizar al final de cada sesión. Ver `AGENTS.md` (protocolo) y `90 - Sistema/Registros/`._
