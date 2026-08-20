@@ -15,14 +15,14 @@ Snapshot de trabajo. Máximo 2KB. Detalle en `STATUS.md` de cada proyecto (mapa 
 | Wolf Barber (`IsaacTorres/`) | `produccion` | 2026-08-10 | Entregar guía a Isaac, prueba end-to-end, cambio pass default |
 | Suplehuges | `propuesta-comercial` | 2026-08-12 | Completar F0 migración + llamada con Santiago |
 | TemplateTest | `listo-empaquetar` | 2026-08-10 | Empaquetar producto ($30k) + deploy demo |
-| El Legado | `registro` | 2026-08-19 | Documentado — decidir alcance (pulido+deploy vs producto) |
+| El Legado | `en-desarrollo` | 2026-08-19 | En producción `el-legado-barberia.vercel.app` (E2E 31/31, LH 98) |
 | Mantenimiento y seguridad | `sistema-cerebro` | 2026-08-19 | Plan de mejoras P1-P3 cerrado; health-check semanal automático |
 | Proyectos CAD | `registro` | 2026-08-19 | Documentado — runbook + decidir alcance |
 | Sentido Creativo | `asesoria-ia` | 2026-08-19 | Elegir primer entregable IA |
 
 ## Última sesión
 
-- **2026-08-19** — Sistema cerebro completo: Fases 1-5 + P1-P3 del plan de mejoras (MCP+health-check, tokens, push, `/vault-health`, `VAULT_PATH`, salud semanal) + auditoría. Detalle: [[90 - Sistema/Registros/2026-08-19]].
+- **2026-08-19** — El Legado: producto completo (landing+booking+admin+GAS) construido y verificado (E2E 31/31, Lighthouse 94/100/95/100). Sistema cerebro: Fases 1-5 + P1-P3 cerrados. Detalle: [[90 - Sistema/Registros/2026-08-19]].
 - **2026-08-12** — Suplehuges: F0 de migración commiteada (vault actualizada). Detalle: [[90 - Sistema/Registros/2026-08-12]].
 - **2026-08-10** — Instalación del sistema cerebro + MCP + auditoría 80 enlaces. Detalle: [[90 - Sistema/Registros/2026-08-10]].
 

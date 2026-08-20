@@ -15,7 +15,7 @@ tags: [meta, sistema, enrutamiento]
 | `IsaacTorres/` | [[10 - Proyectos/Isaac Torres - Wolf Barber\|Isaac Torres - Wolf Barber]] | `produccion` | Activo | `estándar` | `wolf-barber-booking` |
 | `SupleHuges/` | [[10 - Proyectos/Suplehuges\|Suplehuges]] | `propuesta-comercial` | Activo | `estándar` | — |
 | `TemplateTest/` | [[10 - Proyectos/TemplateTest\|TemplateTest]] | `listo-empaquetar` | Activo | `estándar` | — |
-| `El Legado/` | [[10 - Proyectos/El Legado\|El Legado]] | `registro` | Activo | `barato` | — |
+| `El Legado/` | [[10 - Proyectos/El Legado\|El Legado]] | `en-desarrollo` | Activo | `barato` | `wolf-barber-booking` |
 | `Mantenimiento y seguridad/` | [[10 - Proyectos/Mantenimiento y seguridad\|Mantenimiento y seguridad]] | `sistema-cerebro` | Activo | `barato` | `vault-brain` |
 | `Proyectos CAD/` | [[10 - Proyectos/Proyectos CAD\|Proyectos CAD]] | `registro` | Activo | `barato` | — |
 | `Sentido Creativo/` | [[10 - Proyectos/Sentido Creativo\|Sentido Creativo]] | `asesoria-ia` | Activo | `estándar` | — |
