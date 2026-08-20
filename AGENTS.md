@@ -10,7 +10,7 @@ La vault es la memoria de trabajo: qué hay, qué se hizo, qué falta y qué sig
 - `20 - Areas/` — responsabilidades continuas (sin fecha de fin).
 - `30 - Recursos/` — material de referencia y conocimiento permanente.
 - `40 - Archivo/` — todo lo cerrado/obsoleto. **Nunca borrar**: archivar aquí.
-- `90 - Sistema/` — infraestructura de la vault: `Registros/` (log de sesiones), `Panel de Estado.md` (dashboard), plantillas.
+- `90 - Sistema/` — infraestructura de la vault: `MANIFEST.md` (enrutamiento proyecto→carpeta de vault), `Registros/` (log de sesiones), `Panel de Estado.md` (dashboard), plantillas.
 - Raíz: `Home.md` (MOC raíz), `CONTEXT.md` (estado global ≤2KB), `VAULT.md` (guía del vault), este archivo.
 
 ## 2. Reglas de oro
@@ -26,7 +26,8 @@ La vault es la memoria de trabajo: qué hay, qué se hizo, qué falta y qué sig
 Orden estricto, de lo pequeño a lo grande:
 
 1. `CONTEXT.md` — snapshot global (2KB). No leer más si responde la pregunta.
-2. `10 - Proyectos/<P>/STATUS.md` — estado del proyecto (3KB).
+2. `90 - Sistema/MANIFEST.md` — enrutamiento: qué proyecto se documenta en qué carpeta de la vault.
+3. `10 - Proyectos/<P>/STATUS.md` — estado del proyecto (3KB).
 3. Nota específica vía MCP dirigido: `vault_get_document_map` para headings/frontmatter → `vault_read` de la sección exacta.
 4. `search_query`/`search_simple` para localizar, `tag_list` para inventarios.
 

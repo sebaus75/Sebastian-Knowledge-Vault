@@ -14,6 +14,7 @@ tags: [proyecto, status, ecommerce]
 
 ## Hecho (más reciente primero)
 
+- [2026-08-12] **S5 visual commiteado** (`a25fbdd` + chore `cf830b9`): verificación final completa (audit 0 issues con Range check, func_check + func_extra OK, shot_check 0 errores, footer/bottom-nav/FAB visibles en 6 vistas) + 14 shots `s5_*` nuevos en `.qa/images/`; working tree limpio. AGENTS.md del repo corregido (F0 ya en `2641d32`).
 - [2026-08-12] **S5 — F0 migración fuera de Shopify** (commit `2641d32`): repo sin dominios reales (config-driven + gitignored), `supabase/schema.sql` (7 tablas + RLS), seed/fetch de imágenes, stubs webhooks, runbook `.qa/migracion.md`. Verificado: funcional OK; imágenes esperan credenciales (estado intermedio).
 - [2026-08-12] **S5 visual**: botones 3D hard-shadow, footer/bottom-nav/FAB globales; **marquee de anuncio APROBADO por el dueño** (ya no es PRUEBA). Audit 0 issues, shots OK, 4 revisiones MiMo OK.
 - [2026-08-12] S4: pulido pedido/drops/producto (timeline fijo, self-link carrito, video hero pausado) — commit `e9c3ff4`.

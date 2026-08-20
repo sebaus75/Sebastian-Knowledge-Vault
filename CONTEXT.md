@@ -1,35 +1,41 @@
 ---
 created: 2026-08-10
-updated: 2026-08-12
+updated: 2026-08-19
 tags: [meta, contexto]
 ---
 
 # CONTEXT — Estado global de la vault
 
-Snapshot de trabajo. Máximo 2KB. Detalle en `STATUS.md` de cada proyecto y en `90 - Sistema/Registros/`.
+Snapshot de trabajo. Máximo 2KB. Detalle en `STATUS.md` de cada proyecto (mapa completo: `90 - Sistema/MANIFEST.md`).
 
 ## Proyectos activos
 
-| Proyecto | Fase | Estado | Última actualización | Próximo paso |
-|---|---|---|---|---|
-| [[10 - Proyectos/Isaac Torres - Wolf Barber/Isaac Torres - Wolf Barber\|Wolf Barber]] | `produccion` | Activo | 2026-08-10 | Entregar guía a Isaac, prueba end-to-end y cambio de contraseña default |
-| [[10 - Proyectos/Suplehuges/Suplehuges\|Suplehuges]] | `propuesta-comercial` | Activo | 2026-08-12 | Completar F0 migración (credenciales Supabase) + agendar llamada con Santiago |
-| [[10 - Proyectos/TemplateTest/TemplateTest\|TemplateTest]] | `listo-empaquetar` | Activo | 2026-08-10 | Empaquetar como producto ($30k) con README y checklist de despliegue |
+| Proyecto | Fase | Última | Próximo paso |
+|---|---|---|---|
+| Wolf Barber (`IsaacTorres/`) | `produccion` | 2026-08-10 | Entregar guía a Isaac, prueba end-to-end, cambio pass default |
+| Suplehuges | `propuesta-comercial` | 2026-08-12 | Completar F0 migración + llamada con Santiago |
+| TemplateTest | `listo-empaquetar` | 2026-08-10 | Empaquetar producto ($30k) + deploy demo |
+| El Legado | `registro` | 2026-08-19 | Revisar HTML y documentar proyecto |
+| Mantenimiento y seguridad | `sistema-cerebro` | 2026-08-19 | **Fase 3: plugin hooks + vault-health + backup** |
+| Proyectos CAD | `registro` | 2026-08-19 | Documentar pipeline Python |
+| Sentido Creativo | `asesoria-ia` | 2026-08-19 | Elegir primer entregable IA |
 
 ## Última sesión
 
-- **2026-08-12** — Suplehuges: F0 de migración fuera de Shopify commiteada (`2641d32`, repo sin dominios reales); vault actualizada (registro, STATUS, MOC + 4 notas técnicas). Detalle: [[90 - Sistema/Registros/2026-08-12]].
-- **2026-08-10** — Mantenimiento integral de la vault: conexión MCP (Obsidian Local REST API v5.0.2 + TLS), auditoría y reparación de 80 enlaces, normalización de frontmatter (`created`/`tags`), snippet visual de grafo + 8 color groups, e instalación del sistema cerebro (AGENTS.md, CONTEXT, STATUS, registros). Detalle: [[90 - Sistema/Registros/2026-08-10]].
+- **2026-08-19** — Fase 1 sistema cerebro (AGENTS.md global, MANIFEST, auto-provisioning ×4) + Fases 2A/2B (auditoría skills 42→26, skills en vault + sync + índice). Detalle: [[90 - Sistema/Registros/2026-08-19]].
+- **2026-08-12** — Suplehuges: F0 de migración commiteada (vault actualizada). Detalle: [[90 - Sistema/Registros/2026-08-12]].
+- **2026-08-10** — Instalación del sistema cerebro + MCP + auditoría 80 enlaces. Detalle: [[90 - Sistema/Registros/2026-08-10]].
 
 ## Pendientes globales
 
 - [ ] Revisar `00 - Inbox/` (si hay notas sin procesar).
-- [ ] Respaldar vault en GitHub (respaldo semanal según VAULT.md).
-- [ ] Verificar tags en notas de `30 - Recursos/` para que los color groups del grafo funcionen.
+- [ ] Respaldar vault en GitHub (semanal, pendiente desde 2026-08-10).
+- [ ] Fase 3: plugin hooks + vault-health + backup.
 
 ## Sistema cerebro (leer antes de actuar)
 
 1. `AGENTS.md` — contrato y reglas.
 2. `CONTEXT.md` — este archivo.
-3. `STATUS.md` del proyecto implicado.
-4. `90 - Sistema/Registros/` — historial de sesiones.
+3. `90 - Sistema/MANIFEST.md` — enrutamiento proyecto → carpeta de vault.
+4. `STATUS.md` del proyecto implicado.
+5. `90 - Sistema/Registros/` — historial de sesiones.
