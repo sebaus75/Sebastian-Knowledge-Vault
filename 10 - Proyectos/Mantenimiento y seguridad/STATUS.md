@@ -14,6 +14,7 @@ tags: [proyecto, status, sistema, vault]
 
 ## Hecho (más reciente primero)
 
+- [2026-08-19] **Cierre de sesión** — entrega de reporte final (cumplimiento de las 7 solicitudes + entregables); pendientes P1-P3 delegados a próxima sesión.
 - [2026-08-19] **Repo GitHub activado** — `gh` instalado y autenticado (sebaus75); repo privado creado y pusheado; backup automático pasa a push remoto en cada cierre; sin secretos rastreados (gitignore cubre data.json del plugin). TODO el plan queda 100% operativo.
 - [2026-08-19] **Cierre de implementación** — Home.md actualizado (MOC raíz con los 7 proyectos + MANIFEST + skills); plan de mejoras P1-P3 creado en [[10 - Proyectos/Mantenimiento y seguridad/Plan - Areas de Mejora]] (no ejecutado); entrega con explicación de cumplimiento de las 7 solicitudes + pasos para repo GitHub.
 - [2026-08-19] **Fase 5** — Validación end-to-end en directorio neutro (protocolo global cargado, lectura mínima respetada, skills automáticas correctas); auditoría final de límites (CONTEXT 2019 B, STATUS ≤2.5 KB, mantenimiento re-recortado a 2,336 B); plan CERRADO. Detalle: [[90 - Sistema/Registros/2026-08-19]].
@@ -29,16 +30,20 @@ tags: [proyecto, status, sistema, vault]
 
 ## Bloqueado / Pendiente
 
-- [ ] Configurar remote de GitHub (backup remoto pendiente desde 2026-08-10; commit local ya automático — decisión: no crear repo sin `gh`/token en el entorno). Detalle: [[90 - Sistema/Registros/2026-08-19]].
+- [ ] **P1-01** — Validar acceso MCP real (certificado TLS + prueba `vault_*`; hoy se usa filesystem). Ver [[10 - Proyectos/Mantenimiento y seguridad/Plan - Areas de Mejora]].
+- [ ] **P1-03** — Métricas de tokens por sesión (medir consumo en Registro para modelos de pago).
+- [ ] **Verificar push automático** del plugin en un cierre de sesión real (remote GitHub ya configurado).
+- [ ] Revisar `00 - Inbox/` (pendiente global).
 
 ## Decisiones recientes
 
 - [2026-08-19] ADR-001..004: cerebro global, skills con fuente en vault, backup automático, límites de tokens + ADR-005: validación en producción aprobada. Ver [[10 - Proyectos/Mantenimiento y seguridad/Decisiones Técnicas]].
+- [2026-08-19] Repo GitHub privado creado: `https://github.com/sebaus75/Sebastian-Knowledge-Vault` (decisión del usuario, ejecutada por el agente).
 
 ## Próxima sesión
 
-- Ejercitar el circuito con tareas reales de proyectos (Wolf Barber, Suplehuges, TemplateTest); correr `vault-health` ante cualquier anomalía.
-- Opcional: conectar remote de GitHub.
+- Atacar pendientes **P1-01** (MCP real) y **P1-03** (métricas de tokens) del [[10 - Proyectos/Mantenimiento y seguridad/Plan - Areas de Mejora|plan de mejoras]]; verificar push automático de backup; revisar `00 - Inbox/`.
+- Si el usuario lo prefiere: primera tarea real de proyecto (Wolf Barber, Suplehuges o TemplateTest) para ejercitar el circuito.
 
 ---
 _Actualizar al final de cada sesión. Ver `AGENTS.md` (protocolo) y `90 - Sistema/Registros/`._
